@@ -38,7 +38,7 @@
   <h2 id="ii-create-a-buttercup-vault-and-an-outlook-email-address">II. Create a Buttercup vault and an outlook email address</h2>
   <ol>
     <li>Download, install, and open the <a href="https://buttercup.pw/">Buttercup</a> app </li>
-    <li>Archive -&gt; New Archive -&gt; <code>dn</code>- <code>mydomainname</code>-2023.bcup </li>
+    <li>Archive -&gt; New Archive -&gt; <code>dn</code>-<code>mydomainname</code>-2023.bcup </li>
     <li>Choose a secure, unique password which you won&#39;t forget</li>
     <li>Click &#39;+ ADD ENTRY&#39;</li>
     <li>Title: outlook.live.com -&gt; Username: <code>mydomainname</code>
@@ -157,7 +157,7 @@
     <li>Commit message: &#39;adds minimal &quot;Coming soon&quot; page&#39;</li>
     <li>No &#39;Extended description&#39;, and keep &#39;Commit ... main branch&#39; ticked</li>
     <li>Click &#39;Commit changes&#39;</li>
-    <li>Visit https:// <code>mydomainname</code>.github.io/ - at first it will show a default page </li>
+    <li>Visit https://<code>mydomainname</code>.github.io/ - at first it will show a default page </li>
     <li>After a minute or two, it should show the new &#39;Coming soon&#39; page</li>
   </ol>
 <pre><code class="language-html">
@@ -191,20 +191,16 @@
     <li>Under that should say &#39;TLS certificate is ... 15 minutes to complete.&#39;</li>
     <li>&#39;Enforce HTTPS&#39; should not be ticked, if you want to support old browsers</li>
     <li>After a few minutes, these 4 URLs should all work: <ul>
-        <li>https:// <code>mydomainname</code>.com </li>
-        <li>
-          <a href="https://www.%60mydomainname%60.com">https://www.`mydomainname`.com</a> [301 to https:// <code>mydomainname</code>.com]
-        </li>
-        <li>http:// <code>mydomainname</code>.com [redirects, unless curl or old browser] </li>
-        <li>
-          <a href="http://www.%60mydomainname%60.com">http://www.`mydomainname`.com</a> [combination of the above two behaviors]
-        </li>
+        <li>https://<code>mydomainname</code>.com</li>
+        <li>https://www.<code>mydomainname</code>.com</a> [301 to https://<code>mydomainname</code>.com]</li>
+        <li>http://<code>mydomainname</code>.com [redirects, unless curl or old browser]</li>
+        <li>http://www.<code>mydomainname</code>.com</a> [combination of the above two behaviors]</li>
       </ul>
     </li>
   </ol>
   <blockquote>
     <p>
-      <strong>IMPORTANT NOTE:</strong> Now back up your <code>dn</code>- <code>mydomainname</code>-2023.bcup file, copied to several safe places. In January 2024, change all the passwords and save as a new file <code>dn</code>- <code>mydomainname</code>-2024.bcup. Rinse and repeat every year!
+      <strong>IMPORTANT NOTE:</strong> Now back up your <code>dn</code>-<code>mydomainname</code>-2023.bcup file, copied to several safe places. In January 2024, change all the passwords and save as a new file <code>dn</code>-<code>mydomainname</code>-2024.bcup. Rinse and repeat every year!
     </p>
   </blockquote>
 </body>
