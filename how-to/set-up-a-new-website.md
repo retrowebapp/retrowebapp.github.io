@@ -17,7 +17,7 @@ This guide uses six placeholders:
 - Substitute `Kim` with your own first name
 - Substitute `Doe` with your own second name
 - Substitute `kimdoe` with your own username
-- Substitute `13/6/2024` with today's date
+- Substitute `13/6/2024` with the date one year from today
 
 ---
 
