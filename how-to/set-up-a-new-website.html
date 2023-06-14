@@ -6,8 +6,31 @@
   <meta name="author" content="Ruth Webster">
   <meta name="description"
     content="This how-to guide will walk you through the process of buying a .com domain name, and hosting a minimal 'Coming soon' page on GitHub.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/site.webmanifest">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#000099">
+  <link rel="shortcut icon" href="/icons/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="RetroWebApp">
+  <meta name="application-name" content="RetroWebApp">
+  <meta name="msapplication-TileColor" content="#000099">
+  <meta name="msapplication-config" content="/icons/browserconfig.xml">
+  <meta name="theme-color" content="#000099">
+
 </head>
 <body>
+  <a href="../index.html" tabindex="1"><!-- NN2 needs ../ not / -->
+    <img src="/icons/favicon-16x16.gif" alt="A small icon of a dark blue house on a light grey background, in the style of 1990s software">
+    &nbsp;RetroWebApp
+  </a>
+  &nbsp;
+  <a href="./index.html" tabindex="2">
+    <img src="/icons/back-up-16x16.gif" alt="A small icon of a dark blue arrow pointing leftwards then upwards, on a light grey background, in the style of 1990s software">
+    &nbsp;How-to guides
+  </a>
+
   <!-- Converted from .md to .html using codebeautify.org/markdown-to-html and codebeautify.org/htmlviewer (2 Space) -->
   <h2 id="how-to">How to:</h2>
   <h1 id="set-up-a-new-website">Set up a new website</h1>
@@ -192,9 +215,9 @@
     <li>&#39;Enforce HTTPS&#39; should not be ticked, if you want to support old browsers</li>
     <li>After a few minutes, these 4 URLs should all work: <ul>
         <li>https://<code>mydomainname</code>.com</li>
-        <li>https://www.<code>mydomainname</code>.com [301 to https://<code>mydomainname</code>.com]</li>
+        <li>https://www.<code>mydomainname</code>.com< [301 to https://<code>mydomainname</code>.com]</li>
         <li>http://<code>mydomainname</code>.com [redirects, unless curl or old browser]</li>
-        <li>http://www.<code>mydomainname</code>.com [combination of the above two behaviors]</li>
+        <li>http://www.<code>mydomainname</code>.com< [combination of the above two behaviors]</li>
       </ul>
     </li>
   </ol>
