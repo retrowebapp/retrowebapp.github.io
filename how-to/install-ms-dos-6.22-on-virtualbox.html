@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to: Install MS-DOS 6.22 on VirtualBox</title>
+  <meta name="author" content="Ruth Webster">
+  <meta name="description"
+    content="This how-to guide will help you install MS-DOS 6.22 as a virtual machine on Oracle VirtualBox.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/site.webmanifest">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#000099">
+  <link rel="shortcut icon" href="/icons/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="RetroWebApp">
+  <meta name="application-name" content="RetroWebApp">
+  <meta name="msapplication-TileColor" content="#000099">
+  <meta name="msapplication-config" content="/icons/browserconfig.xml">
+  <meta name="theme-color" content="#000099">
+
+</head>
+<body>
+  <a href="../index.html" tabindex="1"><!-- NN2 needs ../ not / -->
+    <img src="/icons/favicon-16x16.gif" alt="A small icon of a dark blue house on a light grey background, in the style of 1990s software">
+    &nbsp;RetroWebApp
+  </a>
+  &nbsp;
+  <a href="./index.html" tabindex="2">
+    <img src="/icons/back-up-16x16.gif" alt="A small icon of a dark blue arrow pointing leftwards then upwards, on a light grey background, in the style of 1990s software">
+    &nbsp;How-to guides
+  </a>
+
+  <!-- Converted from .md to .html using codebeautify.org/markdown-to-html and codebeautify.org/htmlviewer (2 Space) -->
+  <h2 id="how-to">How to:</h2>
+  <h1 id="install-ms-dos-622-on-virtualbox">Install MS-DOS 6.22 on VirtualBox</h1>
+  <p>
+    <strong>Ruth Webster, June 14th 2023</strong>
+  </p>
+  <p>1994&#39;s <a href="https://en.wikipedia.org/wiki/MS-DOS">MS-DOS 6.22</a> was the last standalone DOS product sold by Microsoft. It&#39;s the foundation for 1993&#39;s <a href="https://en.wikipedia.org/wiki/Windows_3.1x">Windows 3.11</a>, which is the earliest OS that 1996&#39;s <a href="https://en.wikipedia.org/wiki/Internet_Explorer_3">Internet Explorer 3</a> can run on. </p>
+  <p>This how-to guide will help you install MS-DOS 6.22 as a virtual machine on <a href="https://en.wikipedia.org/wiki/VirtualBox">Oracle VirtualBox</a>. After creating an MS-DOS 6.22 virtual machine, you&#39;ll be able to install Windows 3.11. Check out our how-to guide: </p>
+  <ul>
+    <li>
+      <a href="./install-windows-3.11-on-virtualbox.html">How to: Install Windows 3.11 on VirtualBox</a>
+    </li>
+  </ul>
+  <p>VirtualBox is free to download and use. MS-DOS 6.22 can be considered <a href="https://en.wikipedia.org/wiki/Abandonware">abandonware</a> - Microsoft stopped supporting it at the end of 2001. </p>
+  <hr>
+  <h3 id="prerequisites-and-resources">Prerequisites and resources:</h3>
+  <ul>
+    <li>&#39;Microsoft MS-DOS 6.22 Plus Enhanced Tools (3.5-1.44mb)&#39; from <a href="https://winworldpc.com/download/c38fc38d-68c2-bbe2-80a6-4b11c3a4c2ac">winworldpc.com</a> (~5 MB)
+    </li>
+    <li>Or; the same file renamed &#39;ms-dos-6.22-plus-enhanced-tools-3.5.7z&#39;, from <a href="./install-ms-dos-6.22/ms-dos-6.22-plus-enhanced-tools-3.5.7z">here </a>
+    </li>
+    <li>Ideally, a computer running macOS - but Linux, Solaris or Windows are ok</li>
+    <li>VirtualBox 7.0 or later, <a href="https://www.virtualbox.org/wiki/Downloads">downloaded from virtualbox.org</a> (~130 MB)
+    </li>
+  </ul>
+  <p>This how-to guide is targeted at macOS Monterey on an Intel MacBook. Other recent macOS versions should work very similarly.</p>
+  <p>If you're on Linux, Solaris or Windows, steps &#39;I. Install VirtualBox&#39; and &#39;II. Open VirtualBox&#39; will be very different for you. But the steps after that should be quite easy to follow, if you ignore the Mac-specific keyboard shortcuts.</p>
+  <hr>
+  <h3 id="this-guide-uses-one-placeholder">This guide uses one placeholder:</h3>
+  <ul>
+    <li>Substitute <code>/Users/kimdoe/VirtualBox VMs</code> with your &#39;Default Machine Folder&#39; </li>
+  </ul>
+  <hr>
+  <h2 id="i-install-virtualbox">I. Install VirtualBox</h2>
+  <ol>
+    <li>Download VirtualBox 7.0 or later from <a href="https://www.virtualbox.org/wiki/Downloads">virtualbox.org</a> - about 130 MB </li>
+    <li>Double-click the downloaded &#39;VirtualBox-7.0.8-156879-OSX.dmg&#39;</li>
+    <li>Double-click &#39;VirtualBox.pkg&#39; in the window which pops up</li>
+    <li>Click &#39;Continue&#39; -&gt; click &#39;Install&#39;</li>
+    <li>Enter your Mac&#39;s password -&gt; click &#39;Install Software&#39;</li>
+    <li>Wait for &#39;The installation was successful&#39; -&gt; click &#39;Close&#39;</li>
+    <li>&#39;Do you want ...&#39; -&gt; click &#39;Keep&#39; if you may need &#39;VirtualBox_Uninstall.tool&#39;</li>
+    <li>Close the &#39;VirtualBox&#39; window, and eject the &#39;VirtualBox&#39; volume</li>
+  </ol>
+  <h2 id="ii-open-virtualbox">II. Open VirtualBox</h2>
+  <ol>
+    <li>Command-Shift-A to open the &#39;Applications&#39; folder</li>
+    <li>Start typing &#39;virtu...&#39; to find the &#39;VirtualBox&#39; app</li>
+    <li>Command-O to open VirtualBox</li>
+  </ol>
+  <h2 id="iii-create-a-new-virtual-machine-in-guided-mode">III. Create a new virtual machine in &#39;Guided Mode&#39;</h2>
+  <ol>
+    <li>You should see the &#39;Oracle VM VirtualBox Manager&#39; window</li>
+    <li>Click the &#39;New&#39; icon</li>
+    <li>Name: MS-DOS 6.22</li>
+    <li>Folder: <code>/Users/kimdoe/VirtualBox VMs</code> [keep your own default] </li>
+    <li>ISO Image: &lt;not selected&gt; [the default]</li>
+    <li>Type: Other -&gt; Version: DOS [the defaults, after you entered the Name]</li>
+    <li>Click &#39;Next&#39;</li>
+    <li>Base Memory: 128 MB -&gt; Processors: 1 -&gt; click &#39;Next&#39;</li>
+    <li>Under &#39;Create a Virtual Hard Disk Now&#39;, Disk Size: 256.00 MB -&gt; click &#39;Next&#39;</li>
+    <li>Click &#39;Finish&#39; - you should see &#39;MS-DOS 6.22 Powered Off&#39; in the sidebar</li>
+  </ol>
+  <h2 id="iv-grab-your-assets">IV. Grab your assets</h2>
+  <ol>
+    <li>Command-Tab one or more times, to the go to the Finder</li>
+    <li>Command-Shift-G, to open the &#39;Go to Folder&#39; popup</li>
+    <li>Start typing &#39;~/Virtu...&#39; to find the &#39;VirtualBox VMs&#39; folder</li>
+    <li>Press the Return key - you should see the &#39;MS-DOS 6.22&#39; folder</li>
+    <li>Double-click the &#39;MS-DOS 6.22&#39; folder - you should see three files: <ul>
+        <li>MS-DOS 6.22.vbox (2 KB)</li>
+        <li>MS-DOS 6.22.vbox-prev (1 KB)</li>
+        <li>MS-DOS 6.22.vdi (2.1 MB)</li>
+      </ul>
+    </li>
+    <li>Command-UpArrow, to show your <code>/Users/kimdoe/VirtualBox VMs/</code> folder again </li>
+    <li>Command-Shift-N -&gt; type: &#39;MS-DOS 6.22 Assets&#39; -&gt; press the Return key</li>
+    <li>Download <a href="#prerequisites-and-resources">the .7z file</a> to your new &#39;MS-DOS 6.22 Assets&#39; folder </li>
+    <li>Double-click the .7z file to extract the folder containing floppy-disk images</li>
+  </ol>
+</body>
+</html>
