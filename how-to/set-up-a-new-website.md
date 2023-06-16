@@ -11,7 +11,8 @@ free (and will hopefully be free forever).
 
 ---
 
-This guide uses six placeholders:
+### This guide uses six placeholders:
+
 - Substitute `mydomainname` with your own domain name
 - Substitute `dn` with a two-letter acronym of your domain name
 - Substitute `Kim` with your own first name
