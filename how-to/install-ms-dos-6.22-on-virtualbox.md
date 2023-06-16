@@ -164,7 +164,10 @@ it hidden, but luckily it rarely gets in the way.
 ## VI. Get to the 'Microsoft MS-DOS 6.22 Setup' screen
 
 ![The MS-DOS 6.22 Setup screen, after pressing F5 to turn the background black.
-](./install-ms-dos-6.22/install-ms-dos-6.22-vi-720x454.gif)
+](./install-ms-dos-6.22/install-ms-dos-6.22-vi-720x454.gif)  
+[Watch the full animated GIF
+](./install-ms-dos-6.22/install-ms-dos-6.22-vi-720x454-12fps.gif)
+
 
 1. Command-Option-D to toggle the macOS dock into view
 2. Click on the 'VirtualBox' icon to reopen the VirtualBox Manager
@@ -198,7 +201,9 @@ it hidden, but luckily it rarely gets in the way.
 ## VII. Install MS-DOS 6.22 from the virtual floppy-disks
 
 ![The MS-DOS 6.22 Setup screen, after completing the installation, and before
-restarting.](./install-ms-dos-6.22/install-ms-dos-6.22-viI-720x568.gif)
+restarting.](./install-ms-dos-6.22/install-ms-dos-6.22-vii-720x568.gif)  
+[Watch the full animated GIF
+](./install-ms-dos-6.22/install-ms-dos-6.22-vii-720x568-12fps.gif)
 
 1. The 'Microsoft MS-DOS 6.22 Setup' screen should be saying 'press ENTER'
 2. Press the Return key. Some keyboards have an Enter key in addition to a
