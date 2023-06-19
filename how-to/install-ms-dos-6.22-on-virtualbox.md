@@ -4,34 +4,39 @@
 __Ruth Webster, June 16th 2023__
 
 1994's [MS-DOS 6.22](https://en.wikipedia.org/wiki/MS-DOS) was the last
-standalone DOS product sold by Microsoft. It's the foundation for 1993's
-[Windows 3.11](https://en.wikipedia.org/wiki/Windows_3.1x), which is the
-earliest OS that 1996's
-[Internet Explorer 3](https://en.wikipedia.org/wiki/Internet_Explorer_3) can
-run on.
+standalone version of DOS released by Microsoft. It's the foundation for
+[Windows 3.11,](https://en.wikipedia.org/wiki/Windows_3.1x) the last 16-bit
+version of Windows.
 
 This how-to guide will help you install MS-DOS 6.22 as a virtual machine
-on [Oracle VirtualBox](https://en.wikipedia.org/wiki/VirtualBox). After
-creating an MS-DOS 6.22 virtual machine, you'll be able to install Windows 3.11.
-Check out our how-to guide:  
-- [How to: Install Windows 3.11 on VirtualBox](
-  ./install-windows-3.11-on-virtualbox.md)
+on [Oracle VirtualBox.](https://en.wikipedia.org/wiki/VirtualBox) Once you've
+done that, check out the next guide in this series,
+[How to: Install Windows 3.11 on VirtualBox.
+](./install-windows-3.11-on-virtualbox.md) 
+
+---
+
+### TL;DR:
+
+__The result of following this guide,__
+__'ms-dos-6.22-after-first-successful-restart.zip', is available__ [__here__
+](./install-ms-dos-6.22/ms-dos-6.22-after-first-successful-restart.zip)
+
+---
+
+### Resources and prerequisites:
+
+- 'Microsoft MS-DOS 6.22 Plus Enhanced Tools (3.5-1.44mb)' from [winworldpc.com
+  ](https://winworldpc.com/download/c38fc38d-68c2-bbe2-80a6-4b11c3a4c2ac) (~5 MB)
+- Or; the same file renamed 'ms-dos-6.22-plus-enhanced-tools.7z', from [here
+  ](./install-ms-dos-6.22/ms-dos-6.22-plus-enhanced-tools.7z)
+- Ideally, a computer running macOS - but Linux, Solaris or Windows are ok
+- VirtualBox 7.0 or later, [downloaded from virtualbox.org
+  ](https://www.virtualbox.org/wiki/Downloads) (~130 MB)
 
 VirtualBox is free to download and use. MS-DOS 6.22 can be considered
 [abandonware](https://en.wikipedia.org/wiki/Abandonware) - Microsoft stopped
 supporting it at the end of 2001.
-
----
-
-### Prerequisites and resources:
-
-- 'Microsoft MS-DOS 6.22 Plus Enhanced Tools (3.5-1.44mb)' from [winworldpc.com
-  ](https://winworldpc.com/download/c38fc38d-68c2-bbe2-80a6-4b11c3a4c2ac) (~5 MB)
-- Or; the same file renamed 'ms-dos-6.22-plus-enhanced-tools-3.5.7z', from [here
-  ](./install-ms-dos-6.22/ms-dos-6.22-plus-enhanced-tools-3.5.7z)
-- Ideally, a computer running macOS - but Linux, Solaris or Windows are ok
-- VirtualBox 7.0 or later, [downloaded from virtualbox.org
-  ](https://www.virtualbox.org/wiki/Downloads) (~130 MB)
 
 This how-to guide is targeted at macOS Monterey on an Intel MacBook. Other
 recent macOS versions should work very similarly.
@@ -74,9 +79,9 @@ the virtual machine's window. Here's a slightly hacky way to prevent it from
 appearing:
 
 1. In the Finder, Command-Shift-U, to open the 'Utilities' folder
-2. Start typing 'ter...' to find the 'Terminal' app -> Command-O to open it
+2. Start typing 'ter...' to find the 'Terminal' utility -> Command-O to open it
 3. Type `VBoxManage getextradata global GUI/SuppressMessages` and Return
-4. You should see 'No value set!'. This confirms that VBoxManage exists, and
+4. You should see 'No value set!'. This confirms that `VBoxManage` exists, and
    shows that the following step has not already been done.
 5. Type `VBoxManage setextradata global GUI/SuppressMessages all` and Return
 6. Press the UpArrow key twice to show `VBoxManage getextradata ...` and Return
@@ -87,7 +92,7 @@ VirtualBox 7 has a second 'Notification Center', which overlays the right side
 of the 'VirtualBox Manager'. There doesn't currently seem to be a way to keep
 it hidden, but luckily it rarely gets in the way.
 
-## III. Create a new virtual machine in 'Guided Mode'
+## III. Create a new MS-DOS virtual machine in 'Guided Mode'
 
 1. In the Finder, Command-Shift-H to open your home folder in a new window
 2. You should see there is currently no 'VirtualBox VMs' folder
@@ -96,7 +101,7 @@ it hidden, but luckily it rarely gets in the way.
 5. You should see the 'Oracle VM VirtualBox Manager' window
 6. Click the 'New' icon
 7. Name: MS-DOS-6.22
-8. Folder: [keep the default, '/Users/&lt;my-username>/VirtualBox VMs']
+8. Folder: [keep the default, '/Users/&lt;your-username>/VirtualBox VMs']
 9. ISO Image: &lt;not selected> [the default]
 10. Type: Other [selected automatically when you type 'MS-DOS' in the Name]
 11. Version: DOS [selected automatically when you type 'MS-DOS' in the Name]
@@ -123,22 +128,22 @@ it hidden, but luckily it rarely gets in the way.
    - MS-DOS-6.22.vbox-prev (1 KB)
    - MS-DOS-6.22.vdi (2.1 MB)
 7. Command-Tab to 'VirtualBox' -> click the 'Take' icon
-8. Snapshot Name: 'Initial State'
-9. Snapshot Description: 'Before starting up for the first time.' -> click 'Ok'
+8. Snapshot Name: Initial State
+9. Snapshot Description: Before starting up for the first time. -> click 'Ok'
 10. You should see 'Initial State' in the snapshots list, with 'Current state'
     nested underneath
 11. Command-Q to quit VirtualBox Manager (good practice before backing up)
 12. In the 'MS-DOS-6.22' folder, you should see that a 'Snapshots' folder has
     been added. Inside is a .vdi file (2.1 MB).
 13. Command-UpArrow, to the 'VirtualBox VMs' folder
-14. Control-click the 'MS-DOS-6.22' folder -> 'Compress 'MS-DOS-6.22'
-14. Note that the compressed .zip file is tiny - only about 9 KB. Compression
+14. Control-click the 'MS-DOS-6.22' folder -> 'Compress “MS-DOS-6.22”'
+15. Note that the compressed .zip file is tiny - only about 9 KB. Compression
     works really well on the Virtual Disk Image (.vdi) files, because they're
     currently empty. Your .zip archive files will be much bigger later, when the
     .vdi files contain data.
-15. Rename the 'MS-DOS-6.22.zip' file to [ms-dos-6.22-initial-state.zip
+16. Rename the 'MS-DOS-6.22.zip' file to [ms-dos-6.22-initial-state.zip
     ](./install-ms-dos-6.22/ms-dos-6.22-initial-state.zip)
-16. Back up the 'ms-dos-6.22-initial-state.zip' file
+17. Back up the 'ms-dos-6.22-initial-state.zip' file
 
 > __DOWNLOAD:__ The 'ms-dos-6.22-initial-state.zip' archive is available [here
 > ](./install-ms-dos-6.22/ms-dos-6.22-initial-state.zip).
@@ -147,8 +152,9 @@ it hidden, but luckily it rarely gets in the way.
 
 1. In the 'VirtualBox VMs' folder, Command-Shift-N to create a new folder
 2. Command-Shift-N -> type: 'MS-DOS-6.22-Assets' -> press the Return key
-3. Download [the .7z file](#prerequisites-and-resources) to your new 'MS-DOS-6.22-Assets' folder
-4. Double-click the .7z file to extract the folder containing floppy-disk images
+3. Download [the .7z file](#resources-and-prerequisites) to your new
+   'MS-DOS-6.22-Assets' folder
+4. Double-click the .7z file to unzip it into a new folder
 5. You should see the 'Microsoft MS-DOS 6.22 Plus Enhanced Tools (3.5)' folder
 6. Double-click that folder - you should see nine files, all dated late 2014:
    - Disk1.img (1.5 MB)
@@ -167,7 +173,6 @@ it hidden, but luckily it rarely gets in the way.
 ](./install-ms-dos-6.22/install-ms-dos-6.22-vi-720x454.gif)  
 [Watch the full animated GIF
 ](./install-ms-dos-6.22/install-ms-dos-6.22-vi-720x454-12fps.gif)
-
 
 1. Command-Option-D to toggle the macOS dock into view
 2. Click on the 'VirtualBox' icon to reopen the VirtualBox Manager
@@ -253,15 +258,18 @@ This fix can be used if, after a restart, you see these two lines:
    `HIMEM is testing extended memory...done.`  
    `C:\>C:\DOS\SMARTDRV.EXE /X`  
    `C:\>`  
-2. Type 'DIR' at the prompt, to check that MD-DOS is working -> press Return.  
-   MS-DOS commands are not case sensitive, so 'dir' works the same as 'DIR'.
-3. You should see a summary of drive C, containing '5 file(s)'
+2. Type `MSD` at the prompt to open [Microsoft Diagnostics.
+   ](https://en.wikipedia.org/wiki/Microsoft_Diagnostics) This confirms that
+   MD-DOS is working. MS-DOS commands are not case sensitive, so `msd` works the
+   same as `MSD`.
+3. Press O -> you should see `Operating System: MS-DOS 6.22` -> Fn-F3 to exit
 4. Press HostKey-T to take a snapshot
-5. Snapshot Name: After 1st Successful Restart
-6. Snapshot Description: Installed MS-DOS 6.22 and invoked 'DIR'. -> click 'Ok'
+5. Snapshot Name: After First Successful Restart
+6. Snapshot Description: Just a plain installation of MS-DOS 6.22, with no
+   custom drivers or other software. -> click 'Ok'
 7. Press the 'host key', Command-Tab to the VirtualBox Manager
-8. Click the menu icon to the right of 'MS-DOS 6.22' -> click 'Snapshots'
-9. You should see 'After 1st Successful Restart' listed on the right. The
+8. Click the menu icon to the right of 'MS-DOS-6.22' -> click 'Snapshots'
+9. You should see 'After First Successful Restart' listed on the right. The
    'Current State (changed)' means that your virtual machine has continued
    running after you took the snapshot.
 10. Command-Tab back to 'VirtualBox VM'
@@ -273,13 +281,13 @@ This fix can be used if, after a restart, you see these two lines:
 16. In the 'Snapshots' folder in the 'MS-DOS-6.22' folder, you should see two
     .vdi files (2.1 MB and 9.4 MB) and a .sav file (666 KB).
 17. Follow the steps in section IV. above, to create
-    [ms-dos-6.22-after-1st-successful-restart.zip
-    ](./install-ms-dos-6.22/ms-dos-6.22-after-1st-successful-restart.zip)
-16. Back up the 'ms-dos-6.22-after-1st-successful-restart.zip' file (~4 MB)
+    [ms-dos-6.22-after-first-successful-restart.zip
+    ](./install-ms-dos-6.22/ms-dos-6.22-after-first-successful-restart.zip)
+16. Back up the 'ms-dos-6.22-after-first-successful-restart.zip' file (~4 MB)
 
-> __DOWNLOAD:__ The 'ms-dos-6.22-after-1st-successful-restart.zip' archive is
+> __DOWNLOAD:__ The 'ms-dos-6.22-after-first-successful-restart.zip' archive is
 > available [here
-> ](./install-ms-dos-6.22/ms-dos-6.22-after-1st-successful-restart.zip).
+> ](./install-ms-dos-6.22/ms-dos-6.22-after-first-successful-restart.zip).
 
 ---
 
