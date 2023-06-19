@@ -36,9 +36,9 @@
     <strong>Ruth Webster, June 17th 2023</strong>
   </p>
   <p>
-    <a href="https://en.wikipedia.org/wiki/Windows_3.1x">Windows 3.11,</a> was the last 16-bit release of the Windows operating system. At RetroWebApp we use it for testing websites and web apps on the first JavaScript web browsers, like <a href="https://en.wikipedia.org/wiki/Netscape_Navigator_2">Netscape 2 </a> and <a href="https://en.wikipedia.org/wiki/Internet_Explorer_3">Internet Explorer 3 </a>.
+    <a href="https://en.wikipedia.org/wiki/Windows_3.1x">Windows 3.11,</a> was the last 16-bit release of the Windows operating system. At RetroWebApp we use it for testing websites and web apps on the first JavaScript web browsers, like <a href="https://en.wikipedia.org/wiki/Netscape_Navigator_2">Netscape 2</a> and <a href="https://en.wikipedia.org/wiki/Internet_Explorer_3">Internet Explorer 3.</a>
   </p>
-  <p>This how-to guide will help you install and set up an <a href="https://en.wikipedia.org/wiki/Original_equipment_manufacturer">OEM</a> version of Windows for Workgroups 3.11, as a virtual machine on <a href="https://en.wikipedia.org/wiki/VirtualBox">Oracle VirtualBox. </a> When it&#39;s up and running, check out the next guide in this series, <a href="./install-the-earliest-web-browsers-on-windows-3.html">How to: Install the Earliest Web Browsers on Windows 3</a>
+  <p>This how-to guide will help you install and set up an <a href="https://en.wikipedia.org/wiki/Original_equipment_manufacturer">OEM</a> version of Windows for Workgroups 3.11, as a virtual machine on <a href="https://en.wikipedia.org/wiki/VirtualBox">Oracle VirtualBox.</a> When it&#39;s up and running, check out the next guide in this series, <a href="./install-the-earliest-web-browsers-on-windows-3.html">How to: Install the Earliest Web Browsers on Windows 3.</a>
   </p>
   <hr>
   <h3 id="tldr">TL;DR:</h3>
@@ -56,16 +56,16 @@
     <li>VirtualBox&#39;s virtual CD-ROM</li>
     <li>Network connection and the Internet</li>
   </ul>
-  <p>Many thanks to Glijnos on the <a href="https://forums.virtualbox.org/index.php">virtualbox.org forums </a> for posting the <a href="https://forums.virtualbox.org/viewtopic.php?t=102121">excellent tutorial </a> that this guide is based on. That tutorial covers some topics not included here, including sound card installation, and increasing the screen resolution to 1024×768. </p>
+  <p>Many thanks to Glijnos on the <a href="https://forums.virtualbox.org/index.php">virtualbox.org forums</a> for posting the <a href="https://forums.virtualbox.org/viewtopic.php?t=102121">excellent tutorial</a> that this guide is based on. That tutorial covers some topics not included here, including sound card installation, and increasing the screen resolution to 1024×768. </p>
   <hr>
   <h3 id="resources-and-prerequisites">Resources and prerequisites:</h3>
   <ul>
-    <li>&#39;Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb)&#39; from <a href="https://winworldpc.com/download/01c38063-1542-c38a-11c3-a7c29d255254">winworldpc.com </a> (~12 MB) </li>
-    <li>Or; the same file renamed &#39;windows-fwg-3.11-oem.7z&#39;, from <a href="./install-windows-3.11/windows-fwg-3.11-oem.7z">here </a>
+    <li>&#39;Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb)&#39; from <a href="https://winworldpc.com/download/01c38063-1542-c38a-11c3-a7c29d255254">winworldpc.com</a> (~12 MB) </li>
+    <li>Or; the same file renamed &#39;windows-fwg-3.11-oem.7z&#39;, from <a href="./install-windows-3.11/windows-fwg-3.11-oem.7z">here</a>
     </li>
-    <li>&#39;wfw311-cd-rom-and-network-drivers.img.zip&#39;, from <a href="./install-windows-3.11/wfw311-cd-rom-and-network-drivers.img.zip">here </a> (unless you want to create it yourself, see <a href="#iv-create-a-virtual-floppy-disk-containing-the-cd-rom-and-network-drivers">IV., </a> below) </li>
+    <li>&#39;wfw311-cd-rom-and-network-drivers.img.zip&#39;, from <a href="./install-windows-3.11/wfw311-cd-rom-and-network-drivers.img.zip">here</a> (unless you want to create it yourself, see <a href="#iv-create-a-virtual-floppy-disk-containing-the-cd-rom-and-network-drivers">IV.,</a> below) </li>
     <li>Ideally, a computer running macOS - but Linux, Solaris or Windows are ok</li>
-    <li>VirtualBox 7.0 or later, with a freshly installed MS-DOS 6.22 virtual machine - see the previous guide, <a href="./install-ms-dos-6.22-on-virtualbox.html">How to: Install MS-DOS 6.22 on VirtualBox </a>
+    <li>VirtualBox 7.0 or later, with a freshly installed MS-DOS 6.22 virtual machine - see the previous guide, <a href="./install-ms-dos-6.22-on-virtualbox.html">How to: Install MS-DOS 6.22 on VirtualBox</a>
     </li>
   </ul>
   <p>VirtualBox is free to download and use. Windows 3.11 can be considered <a href="https://en.wikipedia.org/wiki/Abandonware">abandonware</a> - Microsoft stopped supporting it at the end of 2001. Consequently, Windows 3 drivers can also be considered abandonware. </p>
@@ -75,12 +75,12 @@
   <h2 id="i-clone-an-ms-dos-622-virtual-machine-in-guided-mode">I. Clone an MS-DOS 6.22 virtual machine in &#39;Guided Mode&#39;</h2>
   <ol>
     <li>In the Finder, Command-Shift-H to open your home folder in a new window</li>
-    <li>Double-click the &#39;VirtualBox VMs&#39; folder. If it&#39;s not there, you may need to <a href="./install-ms-dos-6.22-on-virtualbox.html#i-install-virtualbox">install VirtualBox. </a>
+    <li>Double-click the &#39;VirtualBox VMs&#39; folder. If it&#39;s not there, you may need to <a href="./install-ms-dos-6.22-on-virtualbox.html#i-install-virtualbox">install VirtualBox.</a>
     </li>
     <li>If there is no &#39;MS-DOS-6.22&#39; folder inside the &#39;VirtualBox VMs&#39; folder, you can either: <ul>
-        <li>Download and unzip it from <a href="./install-ms-dos-6.22/ms-dos-6.22-after-1st-successful-restart.zip">here </a>
+        <li>Download and unzip it from <a href="./install-ms-dos-6.22/ms-dos-6.22-after-1st-successful-restart.zip">here</a>
         </li>
-        <li>Or; follow the <a href="./install-ms-dos-6.22-on-virtualbox.html">previous how-to guide </a> to build it from scratch </li>
+        <li>Or; follow the <a href="./install-ms-dos-6.22-on-virtualbox.html">previous how-to guide</a> to build it from scratch </li>
       </ul>
     </li>
     <li>In the Finder, Command-Shift-A to open the &#39;Applications&#39; folder</li>
@@ -119,20 +119,20 @@
     <li>In the &#39;Windows-3.11&#39; folder, you should one .vdi file (2.1 MB) inside the &#39;Snapshots&#39; folder</li>
     <li>Optionally, delete the &#39;Logs&#39; folder inside the &#39;Windows-3.11&#39; folder</li>
     <li>Control-click the &#39;Windows-3.11&#39; folder -&gt; &#39;Compress “Windows-3.11”&#39;</li>
-    <li>Rename the &#39;Windows-3.11.zip&#39; file to <a href="./install-windows-3.11/windows-3.11-initial-state.zip">windows-3.11-initial-state.zip </a>
+    <li>Rename the &#39;Windows-3.11.zip&#39; file to <a href="./install-windows-3.11/windows-3.11-initial-state.zip">windows-3.11-initial-state.zip</a>
     </li>
     <li>Back up the &#39;windows-3.11-initial-state.zip&#39; file (~3.5 MB)</li>
   </ol>
   <blockquote>
     <p>
-      <strong>DOWNLOAD:</strong> The &#39;windows-3.11-initial-state.zip&#39; archive is available <a href="./install-windows-3.11/windows-3.11-initial-state.zip">here </a>.
+      <strong>DOWNLOAD:</strong> The &#39;windows-3.11-initial-state.zip&#39; archive is available <a href="./install-windows-3.11/windows-3.11-initial-state.zip">here</a>.
     </p>
   </blockquote>
   <h2 id="iii-extract-the-windows-311-floppy-disk-images-into-a-new-assets-folder">III. Extract the Windows 3.11 floppy disk images into a new &#39;Assets&#39; folder</h2>
   <ol>
     <li>In the &#39;VirtualBox VMs&#39; folder, Command-Shift-N to create a new folder</li>
     <li>Command-Shift-N -&gt; type: &#39;Windows-3.11-Assets&#39; -&gt; press the Return key</li>
-    <li>Download <a href="#resources-and-prerequisites">Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb).7z </a> or <a href="#resources-and-prerequisites">windows-fwg-3.11-oem.7z </a> to your new &#39;Windows-3.11-Assets&#39; folder </li>
+    <li>Download <a href="#resources-and-prerequisites">Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb).7z</a> or <a href="#resources-and-prerequisites">windows-fwg-3.11-oem.7z</a> to your new &#39;Windows-3.11-Assets&#39; folder </li>
     <li>Double-click the .7z file to unzip it, creating a &#39;Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb)&#39; folder</li>
     <li>Double-click the &#39;Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb)&#39; folder - you should see eight .img files dated late 1993, plus a folder of .jpg files, and the standard winworldpc.com.txt file: <ul>
         <li>Disk1.img (1.5 MB)</li>
@@ -155,14 +155,14 @@
     <li>If you download and unzip &#39;wfw311-cd-rom-and-network-drivers.img.zip&#39; from <a href="./install-windows-3.11/wfw311-cd-rom-and-network-drivers.img.zip">here</a>, and place the .img file in the &#39;Windows-3.11-Assets&#39; folder, then you can skip the following steps </li>
     <li>Otherwise, Command-Shift-N to make a new folder inside &#39;Windows-3.11-Assets&#39;</li>
     <li>Type &#39;WFW311 CD-ROM and Network drivers&#39; -&gt; press Return</li>
-    <li>Download the &#39;Oak Technology CD-ROM Driver&#39; file &#39;AOATAPI.SYS&#39; from <a href="https://fsck.technology/software/Microsoft/Windows%20x86%20Install%20Media/Microsoft%20Windows%203.x/Microsoft%20Windows%203.11%20VMWare%20Drivers/CD%20ROM/">fsck.technology </a> (~34 KB), and move it into your &#39;WFW311 CD-ROM and Network drivers&#39; folder </li>
+    <li>Download the &#39;Oak Technology CD-ROM Driver&#39; file &#39;AOATAPI.SYS&#39; from <a href="https://fsck.technology/software/Microsoft/Windows%20x86%20Install%20Media/Microsoft%20Windows%203.x/Microsoft%20Windows%203.11%20VMWare%20Drivers/CD%20ROM/">fsck.technology</a> (~34 KB), and move it into your &#39;WFW311 CD-ROM and Network drivers&#39; folder </li>
     <li>Command-Comma to open &#39;Finder Preferences&#39;</li>
     <li>Click &#39;Sidebar&#39; -&gt; make sure &#39;External disks&#39; is ticked -&gt; Command-W</li>
-    <li>Download &#39;Microsoft TCP-IP-32 For Windows 3.1 (3.5)&#39; from <a href="https://winworldpc.com/download/47c2a8c3-8fc3-8118-c39a-11c3a4e284a2">winworldpc.com </a> (~1 MB), and unzip &#39;Microsoft TCP-IP-32 For Windows 3.1 (3.5).7z&#39; </li>
+    <li>Download &#39;Microsoft TCP-IP-32 For Windows 3.1 (3.5)&#39; from <a href="https://winworldpc.com/download/47c2a8c3-8fc3-8118-c39a-11c3a4e284a2">winworldpc.com</a> (~1 MB), and unzip &#39;Microsoft TCP-IP-32 For Windows 3.1 (3.5).7z&#39; </li>
     <li>Double-click the &#39;Disk01.img&#39; file -&gt; click the &#39;TCP&#39; volume in the sidebar</li>
     <li>Click the &#39;TCP32B.EXE&#39; file to select it -&gt; Command-C to copy it</li>
     <li>Command-[ -&gt; Control-click &#39;WFW311 CD-ROM and Network drivers&#39; -&gt; click &#39;Paste Item&#39;</li>
-    <li>Using the &#39;ZIP&#39; link at <a href="https://archive.org/details/pcntn3.386">archive.org/details/pcntn3.386 </a>, download and unzip &#39;AMD PCNET Ethernet WFW 3.11 Drivers.zip&#39; (~562 KB) </li>
+    <li>Using the &#39;ZIP&#39; link at <a href="https://archive.org/details/pcntn3.386">archive.org/details/pcntn3.386</a>, download and unzip &#39;AMD PCNET Ethernet WFW 3.11 Drivers.zip&#39; (~562 KB) </li>
     <li>Double-click the &#39;AMD PCNET Ethernet WFW 3.11 Drivers&#39; folder</li>
     <li>Double-click the &#39;WFW311&#39; folder</li>
     <li>Command-A to select all -&gt; Command-C to copy them</li>
@@ -332,7 +332,7 @@ MICROSOFT CORPORATION
     <li>Command-Tab to &#39;Finder&#39; -&gt; Command-Shift-H -&gt; double-click &#39;VirtualBox VMs&#39;</li>
     <li>Optionally, delete the &#39;Logs&#39; folder inside the &#39;Windows-3.11&#39; folder</li>
     <li>Control-click the &#39;Windows-3.11&#39; folder -&gt; click &#39;Compress “Windows-3.11”&#39;</li>
-    <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-after-copying-wfw3dvrs-to-drive-c.zip">windows-3.11-after-copying-wfw3dvrs-to-drive-c.zip </a>
+    <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-after-copying-wfw3dvrs-to-drive-c.zip">windows-3.11-after-copying-wfw3dvrs-to-drive-c.zip</a>
     </li>
     <li>Back up the &#39;windows-3.11-after-copying-wfw3dvrs-to-drive-c.zip&#39; file (~6.3 MB)</li>
   </ol>
@@ -370,7 +370,7 @@ FILES=30
     <li>Press Alt -&gt; press Return -&gt; press S, to save</li>
     <li>Press Alt -&gt; press Return -&gt; press X, to exit</li>
     <li>You should be back in the regular MS-DOS environment</li>
-    <li>Type <code>EDIT AUTOEXEC.BAT</code> -&gt; press Return, to start editing <a href="https://en.wikipedia.org/wiki/AUTOEXEC.BAT">DOS&#39;s list of commands to run on startup </a>
+    <li>Type <code>EDIT AUTOEXEC.BAT</code> -&gt; press Return, to start editing <a href="https://en.wikipedia.org/wiki/AUTOEXEC.BAT">DOS&#39;s list of commands to run on startup</a>
     </li>
     <li>This time you should see the following five lines:
 <pre>
@@ -388,7 +388,7 @@ SET TEMP=C:\DOS
     <li>You should be back in the normal MS-DOS environment again</li>
     <li>HostKey-Q -&gt; select &#39;Power off the machine&#39;</li>
     <li>&#39;Restore current snapshot ...&#39; <em>must be unticked</em> -&gt; click &#39;OK&#39; </li>
-    <li>Double-click the Powered Off &#39;Windows-3.11&#39; in the sidebar, to start it running again. A <a href="https://en.wikipedia.org/wiki/Reboot#Cold_versus_warm_reboot">&#39;cold&#39; reboot </a> like this is generally more reliable than a &#39;warm&#39; Control-Alt-Delete reboot. </li>
+    <li>Double-click the Powered Off &#39;Windows-3.11&#39; in the sidebar, to start it running again. A <a href="https://en.wikipedia.org/wiki/Reboot#Cold_versus_warm_reboot">&#39;cold&#39; reboot</a> like this is generally more reliable than a &#39;warm&#39; Control-Alt-Delete reboot. </li>
     <li>You should see that the CD-ROM driver outputs some new boilerplate, as MS-DOS starts up:
 <pre>
 CD-ROM Device Driver for IDE (Four Channels Supported)
@@ -421,7 +421,7 @@ Firmware Version   : 1.0
     <li>Command-Tab to &#39;Finder&#39; -&gt; Command-Shift-H -&gt; double-click &#39;VirtualBox VMs&#39;</li>
     <li>Optionally, delete the &#39;Logs&#39; folder inside the &#39;Windows-3.11&#39; folder</li>
     <li>Control-click the &#39;Windows-3.11&#39; folder -&gt; click &#39;Compress “Windows-3.11”&#39;</li>
-    <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-after-installing-cd-rom-driver.zip">windows-3.11-after-installing-cd-rom-driver.zip </a>
+    <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-after-installing-cd-rom-driver.zip">windows-3.11-after-installing-cd-rom-driver.zip</a>
     </li>
     <li>Back up the &#39;windows-3.11-after-installing-cd-rom-driver.zip&#39; file (~8 MB)</li>
   </ol>
@@ -453,7 +453,7 @@ Firmware Version   : 1.0
     <li>If &#39;System Error Cannot read from drive D.&#39; appears, Click &#39;Cancel&#39; to ignore it</li>
     <li>When &#39;Setup can now run a short tutorial ...&#39; appears, the installation is complete. You can try out the tutorial for some retro fun, or click &#39;Skip Tutorial&#39; to go straight to &#39;Exit Windows Setup&#39;.</li>
     <li>Click the floppy disk icon again -&gt; click &#39;Remove disk from virtual drive&#39;</li>
-    <li>Clicking the &#39;Restart&#39; button just leads to an E200 error (see <a href="./install-ms-dos-6.22-on-virtualbox.html#viii-deal-with-an-unresponsive-restart">part VIII. of &#39;How to: Install MS-DOS 6.22 on VirtualBox&#39; </a> ). So instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;. </li>
+    <li>Clicking the &#39;Restart&#39; button just leads to an E200 error (see <a href="./install-ms-dos-6.22-on-virtualbox.html#viii-deal-with-an-unresponsive-restart">part VIII. of &#39;How to: Install MS-DOS 6.22 on VirtualBox&#39;</a> ). So instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;. </li>
     <li>&#39;Restore current snapshot ...&#39; <em>must be unticked</em> -&gt; click &#39;OK&#39; </li>
     <li>Command-Tab to &#39;VirtualBox&#39; -&gt; double-click &#39;Windows-3.11&#39; to restart it</li>
     <li>Wait for the <code>C:\&gt;</code> prompt to appear -&gt; type <code>WIN</code> -&gt; press Return </li>
@@ -467,7 +467,7 @@ Firmware Version   : 1.0
     <li>Command-Tab to &#39;Finder&#39; -&gt; Command-Shift-H -&gt; double-click &#39;VirtualBox VMs&#39;</li>
     <li>Optionally, delete the &#39;Logs&#39; folder inside the &#39;Windows-3.11&#39; folder</li>
     <li>Control-click the &#39;Windows-3.11&#39; folder -&gt; click &#39;Compress “Windows-3.11”&#39;</li>
-    <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-fresh-windows-3.11-install.zip">windows-3.11-fresh-windows-3.11-install.zip </a>
+    <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-fresh-windows-3.11-install.zip">windows-3.11-fresh-windows-3.11-install.zip</a>
     </li>
     <li>Back up the &#39;windows-3.11-fresh-windows-3.11-install.zip&#39; file (~18 MB)</li>
   </ol>
@@ -500,7 +500,7 @@ Firmware Version   : 1.0
     <li>Wait for the &#39;Windows setup has modified ...&#39; panel to appear (~5 seconds)</li>
     <li>Press Return for &#39;OK&#39;</li>
     <li>Click the small &#39;Floppy&#39; icon again -&gt; &#39;Remove disk from virtual drive&#39;</li>
-    <li>Clicking the &#39;Restart Computer&#39; button just leads to an E200 error (see <a href="./install-ms-dos-6.22-on-virtualbox.html#viii-deal-with-an-unresponsive-restart">part VIII. of &#39;How to: Install MS-DOS 6.22 on VirtualBox&#39; </a> ). So instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;. </li>
+    <li>Clicking the &#39;Restart Computer&#39; button just leads to an E200 error (see <a href="./install-ms-dos-6.22-on-virtualbox.html#viii-deal-with-an-unresponsive-restart">part VIII. of &#39;How to: Install MS-DOS 6.22 on VirtualBox&#39;</a> ). So instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;. </li>
     <li>&#39;Restore current snapshot ...&#39; <em>must be unticked</em> -&gt; click &#39;OK&#39; </li>
     <li>Command-Tab to &#39;VirtualBox&#39; -&gt; double-click &#39;Windows-3.11&#39; to restart it</li>
     <li>Wait for the <code>C:\&gt;</code> prompt to appear -&gt; type <code>WIN</code> -&gt; press Return </li>
@@ -583,13 +583,13 @@ Successfully installed:
     <li>Command-Tab to &#39;Finder&#39; -&gt; Command-Shift-H -&gt; double-click &#39;VirtualBox VMs&#39;</li>
     <li>Optionally, delete the &#39;Logs&#39; folder inside the &#39;Windows-3.11&#39; folder</li>
     <li>Control-click the &#39;Windows-3.11&#39; folder -&gt; click &#39;Compress “Windows-3.11”&#39;</li>
-    <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-with-cd-rom-and-network-drivers.zip">windows-3.11-with-cd-rom-and-network-drivers.zip </a>
+    <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-with-cd-rom-and-network-drivers.zip">windows-3.11-with-cd-rom-and-network-drivers.zip</a>
     </li>
     <li>Back up the &#39;windows-3.11-with-cd-rom-and-network-drivers.zip&#39; file (~ @TODO MB)</li>
   </ol>
   <blockquote>
     <p>
-      <strong>DOWNLOAD:</strong> The &#39;windows-3.11-with-cd-rom-and-network-drivers.zip&#39; archive is available <a href="./install-ms-dos-6.22/windows-3.11-with-cd-rom-and-network-drivers.zip">here </a>.
+      <strong>DOWNLOAD:</strong> The &#39;windows-3.11-with-cd-rom-and-network-drivers.zip&#39; archive is available <a href="./install-ms-dos-6.22/windows-3.11-with-cd-rom-and-network-drivers.zip">here</a>.
     </p>
   </blockquote>
   <hr>
@@ -597,7 +597,7 @@ Successfully installed:
   <p>Windows 3.11 is a great choice for testing your website or web app on the first generation of 16 bit Windows web browsers. To start surfing the World Wide Web like it&#39;s 1995, check out our next how-to guide:</p>
   <ul>
     <li>
-      <a href="./install-the-earliest-web-browsers-on-windows-3.html">How to: Install the Earliest Web Browsers on Windows 3 </a>
+      <a href="./install-the-earliest-web-browsers-on-windows-3.html">How to: Install the Earliest Web Browsers on Windows 3</a>
     </li>
   </ul>
 </body>
