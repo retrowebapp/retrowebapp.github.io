@@ -33,7 +33,7 @@
   <h2 id="how-to">How to:</h2>
   <h1 id="install-windows-311-on-virtualbox">Install Windows 3.11 on VirtualBox</h1>
   <p>
-    <strong>Ruth Webster, June 17th 2023</strong>
+    <strong>Ruth Webster, June 19th 2023</strong>
   </p>
   <p>
     <a href="https://en.wikipedia.org/wiki/Windows_3.1x">Windows 3.11,</a> was the last 16-bit release of the Windows operating system. At RetroWebApp we use it for testing websites and web apps on the first JavaScript web browsers, like <a href="https://en.wikipedia.org/wiki/Netscape_Navigator_2">Netscape 2</a> and <a href="https://en.wikipedia.org/wiki/Internet_Explorer_3">Internet Explorer 3.</a>
@@ -100,17 +100,18 @@
   <h2 id="ii-convert-the-clone-to-a-windows-3-virtual-machine">II. Convert the clone to a Windows 3 virtual machine</h2>
   <ol>
     <li>If not already selected, click <em>once</em> on &#39;Windows-3.11&#39; to select it </li>
-    <li>Click the &#39;Settings&#39; icon</li>
+    <li>Click the &#39;Settings&#39; icon -> -&gt; if the &#39;Type:&#39; and &#39;Version:&#39; fields are grayed-out, it&#39;s because the virtual machine is not &#39;Powered Off&#39;, so you&#39;ll need to click &#39;Cancel&#39; and power it off yourself</li>
     <li>Type: Microsoft Windows -&gt; Version: Windows 3.1</li>
     <li>Click &#39;Description&#39; -&gt; &#39;Windows for Workgroups 3.11 (OEM)&#39;</li>
-    <li>Note that &#39;Invalid settings detected&#39; has appeared. If you hover over the small icon, it should tell you that the video memory is less than the minimum required, which is 10 MB.</li>
+    <li>Note that &#39;Invalid settings detected&#39; has appeared. If you hover over the small icon, it should tell you that the video memory is less than the minimum required.</li>
     <li>Click the &#39;Display&#39; icon -&gt; Video Memory: 32 MB</li>
     <li>Note that &#39;Invalid settings detected&#39; has disappeared</li>
     <li>Click the &#39;System&#39; icon -&gt; Base Memory: 256 MB</li>
     <li>Click &#39;OK&#39;</li>
     <li>You should see that the icon to the left of &#39;Windows-3.11&#39; has changed from the &#39;DOS&#39; logo to the &#39;3.1&#39; logo</li>
     <li>Click the menu icon to the right of &#39;Windows-3.11&#39; -&gt; click &#39;Snapshots&#39;</li>
-    <li>The only snapshot should be &#39;Current State&#39; -&gt; click &#39;Attributes&#39;</li>
+    <li>The only snapshot should be &#39;Current State&#39; -&gt; click &#39;Attributes&#39; (you may
+      need to double-click &#39;Current State&#39; first)</li>
     <li>Name: Initial State</li>
     <li>Description: After cloning from MS-DOS-6.22, and before starting up for the first time.</li>
     <li>Click &#39;Take&#39;</li>
@@ -131,7 +132,7 @@
   <h2 id="iii-extract-the-windows-311-floppy-disk-images-into-a-new-assets-folder">III. Extract the Windows 3.11 floppy disk images into a new &#39;Assets&#39; folder</h2>
   <ol>
     <li>In the &#39;VirtualBox VMs&#39; folder, Command-Shift-N to create a new folder</li>
-    <li>Command-Shift-N -&gt; type: &#39;Windows-3.11-Assets&#39; -&gt; press the Return key</li>
+    <li>Type: &#39;Windows-3.11-Assets&#39; -&gt; press the Return key</li>
     <li>Download <a href="#resources-and-prerequisites">Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb).7z</a> or <a href="#resources-and-prerequisites">windows-fwg-3.11-oem.7z</a> to your new &#39;Windows-3.11-Assets&#39; folder </li>
     <li>Double-click the .7z file to unzip it, creating a &#39;Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb)&#39; folder</li>
     <li>Double-click the &#39;Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb)&#39; folder - you should see eight .img files dated late 1993, plus a folder of .jpg files, and the standard winworldpc.com.txt file: <ul>
@@ -161,12 +162,12 @@
     <li>Download &#39;Microsoft TCP-IP-32 For Windows 3.1 (3.5)&#39; from <a href="https://winworldpc.com/download/47c2a8c3-8fc3-8118-c39a-11c3a4e284a2">winworldpc.com</a> (~1 MB), and unzip &#39;Microsoft TCP-IP-32 For Windows 3.1 (3.5).7z&#39; </li>
     <li>Double-click the &#39;Disk01.img&#39; file -&gt; click the &#39;TCP&#39; volume in the sidebar</li>
     <li>Click the &#39;TCP32B.EXE&#39; file to select it -&gt; Command-C to copy it</li>
-    <li>Command-[ -&gt; Control-click &#39;WFW311 CD-ROM and Network drivers&#39; -&gt; click &#39;Paste Item&#39;</li>
-    <li>Using the &#39;ZIP&#39; link at <a href="https://archive.org/details/pcntn3.386">archive.org/details/pcntn3.386</a>, download and unzip &#39;AMD PCNET Ethernet WFW 3.11 Drivers.zip&#39; (~562 KB) </li>
-    <li>Double-click the &#39;AMD PCNET Ethernet WFW 3.11 Drivers&#39; folder</li>
+    <li>Command-[ back to &#39;Windows-3.11-Assets&#39; -&gt; Control-click &#39;WFW311 CD-ROM and Network drivers&#39; -&gt; click &#39;Paste Item&#39;</li>
+    <li>Using the &#39;ZIP&#39; link at <a href="https://archive.org/details/pcntn3.386">archive.org/details/pcntn3.386</a>, download and unzip &#39;PCNET.ZIP&#39; (~562 KB) </li>
+    <li>Double-click the &#39;PCNET&#39; folder</li>
     <li>Double-click the &#39;WFW311&#39; folder</li>
     <li>Command-A to select all -&gt; Command-C to copy them</li>
-    <li>Command-[ twice -&gt; Control-click &#39;WFW311 CD-ROM and Network drivers&#39; -&gt; click &#39;Paste 3 Items&#39;</li>
+    <li>Command-[ back to &#39;Windows-3.11-Assets&#39; twice -&gt; Control-click &#39;WFW311 CD-ROM and Network drivers&#39; -&gt; click &#39;Paste 3 Items&#39;</li>
     <li>Command-Shift-A -&gt; type &#39;virt&#39; to find the &#39;VirtualBox&#39; app -&gt; Command-O</li>
     <li>Double-click the Powered Off &#39;Windows-3.11&#39; in the sidebar, to start it running</li>
     <li>Note that the small &#39;Floppy&#39; icon at the bottom of the window is grayed-out, which indicates that the virtual floppy disk drive is currently empty</li>
@@ -186,32 +187,40 @@
     <li>You should see:
 <pre>
 Volume in drive A has no label
- Volume Serial Number is 9A4E-FC6E (a unique ID assigned to each disk)  
+ Volume Serial Number is 4C9A-FC13 (a unique ID assigned to each disk)  
  Directory of A:\
 
 File not found
 </pre> ...which means that the disk was read, but contains no files
     </li>
-    <li>Command-Tab to the &#39;Finder&#39; -&gt; open the &#39;Windows-3.11-Assets&#39; folder</li>
+    <li>Command-Tab to the &#39;Finder&#39; (you may need to click outside the vm window first) -&gt; open the &#39;Windows-3.11-Assets&#39; folder</li>
     <li>Double-click the new &#39;wfw311-cd-rom-and-network-drivers.img&#39; file</li>
-    <li>Control-click the text &#39;Untitled&#39; of the volume which has appeared under &#39;Locations&#39; in the sidebar</li>
-    <li>Click &#39;Rename “Untitled”&#39; -&gt; type &#39;WFW3DVRS&#39; -&gt; press Return</li>
-    <li>Double-click &#39;WFW311 CD-ROM and Network drivers&#39; -&gt; Command-A to select all</li>
+    <li>Control-click the text &#39;Untitled&#39; (or sometimes &#39;Untitled 1&#39;) of the volume which has appeared under &#39;Locations&#39; in the sidebar</li>
+    <li>Click &#39;Rename “Untitled”&#39; (or “Untitled 1”, etc) -&gt; type &#39;WFW3DVRS&#39; -&gt; press Return</li>
+    <li>Double-click &#39;WFW311 CD-ROM and Network drivers&#39; -&gt; Select these five files:
+      <ul>
+        <li>AOATAPI.SYS</li>
+        <li>OEMSETUP.INF</li>
+        <li>PCNTN3.386</li>
+        <li>PCNTND.DOS</li>
+        <li>TCP32B.EXE</li>
+      </ul>
+    </li>
     <li>Drag the five files onto the &#39;WFW3DVRS&#39; volume in the sidebar. <br>Note that your mouse cursor becomes a &#39;+&#39; in a green circle, with &#39;5&#39; in a red circle, just before you complete the drag. This indicates you are copying (not moving) five files. </li>
     <li>Click the &#39;WFW3DVRS&#39; volume in the sidebar, and check the files are there</li>
     <li>Command-Tab back to &#39;VirtualBox VM&#39;, and type <code>DIR A:</code> at the prompt, again </li>
     <li>This time you should see:
 <pre>
   Volume in drive A is A
-   Volume Serial Number is 9A4E-FC6E
+   Volume Serial Number is 4C9A-FC13
    Directory of A:\
   
-  AOATAPI  SYS        34,262 06-17-23  10:12a (today&#39;s date and time)
-  OEMSETUP INF         1,500 06-30-95   3:00a
-  PCNTN3   386        35,935 06-30-95   3:00a
-  PCNTND   DOS        52,768 06-30-95   3:00a
+  AOATAPI  SYS        34,262 06-19-23  11:32a (today&#39;s date and time)
+  OEMSETUP INF         1,500 06-30-95   2:00a
+  PCNTN3   386        35,935 06-30-95   2:00a
+  PCNTND   DOS        52,768 06-30-95   2:00a
   TCP32B   EXE       690,031 06-01-08   2:54p
-          5 file(s)        814,495 bytes
+          5 file(s)        814,496 bytes
                            620,544 bytes free
 </pre> ...Note that this provides an almost &#39;live&#39; way of passing files to MS-DOS.
     </li>
@@ -221,10 +230,9 @@ File not found
     <li>Command-Tab to the &#39;Finder&#39; -&gt; click the &#39;eject&#39; icon next to &#39;WFW3DVRS&#39;</li>
     <li>Control-click the &#39;wfw311-cd-rom-and-network-drivers.img&#39; file</li>
     <li>Click &#39;Compress “wfw311-cd-rom-and-network-drivers.img”&#39;</li>
-    <li>Back up the &#39;wfw311-cd-rom-and-network-drivers.img.zip&#39; file (~740 KB)</li>
+    <li>Back up the &#39;wfw311-cd-rom-and-network-drivers.img.zip&#39; file (~739 KB)</li>
   </ol>
   <h2 id="v-copy-the-cd-rom-and-network-drivers-to-the-virtual-hard-drive">V. Copy the CD-ROM and network drivers to the virtual hard drive</h2>
-  <p>@TODO discuss that the .EXE is self extracting... might as well copy them all</p>
   <ol>
     <li>Command-Tab to the &#39;Finder&#39; -&gt; Command-Shift-A -&gt; type &#39;virt&#39; to find the &#39;VirtualBox&#39; app -&gt; Command-O to open it</li>
     <li>Double-click the Powered Off &#39;Windows-3.11&#39; in the sidebar, to start it running</li>
@@ -247,7 +255,7 @@ AUTOEXEC BAT            78 06-16-23  11:42a
     <li>Type <code>MD WFW3DVRS</code> -&gt; press Return -&gt; type <code>DIR</code> and Return again </li>
     <li>You should see that a new directory has been made in the hard drive&#39;s root:
 <pre>
-WFW3DVRS     &lt;DIR&gt;         06-17-23   5:25p
+WFW3DVRS     &lt;DIR&gt;         06-19-23  12:11p
 </pre>
     </li>
     <li>Type <code>CD WFW3DVRS</code> to &#39;change directory&#39; into it </li>
@@ -263,17 +271,16 @@ WFW3DVRS     &lt;DIR&gt;         06-17-23   5:25p
     <li>You should see:
 <pre>
 Volume in drive A is A
- Volume Serial Number is 9A4E-FC6E
+ Volume Serial Number is 4C9A-FC13
  Directory of A:\
 
-AOATAPI  SYS        34,262 06-17-23  10:12a
-OEMSETUP INF         1,500 06-30-95   3:00a
-PCNTN3   386        35,935 06-30-95   3:00a
-PCNTND   DOS        52,768 06-30-95   3:00a
+AOATAPI  SYS        34,262 06-19-23  11:32a
+OEMSETUP INF         1,500 06-30-95   2:00a
+PCNTN3   386        35,935 06-30-95   2:00a
+PCNTND   DOS        52,768 06-30-95   2:00a
 TCP32B   EXE       690,031 06-01-08   2:54p
-README   TXT           145 06-17-23   2:22p
-        6 file(s)        814,641 bytes
-                         614,912 bytes free
+        5 file(s)        814,496 bytes
+                         621,568 bytes free
 </pre>
     </li>
     <li>Type <code>COPY A:\ .</code> -&gt; press Return </li>
@@ -284,26 +291,23 @@ A:\OEMSETUP.INF
 A:\PCNTN3.386
 A:\PCNTND.DOS
 A:\TCP32B.EXE
-A:\README.TXT
-        6 file(s) copied
+        5 file(s) copied
 </pre>
     </li>
-    <li>Note that &#39;TCP32B.EXE&#39; will unzip 33 files into whatever the current directory is, when it&#39;s executed. If that&#39;s the &#39;WFW3DVRS&#39; directory, it will try to overwrite &#39;OEMSETUP.INF&#39; and &#39;README.TXT&#39;.</li>
+    <li>Note that &#39;TCP32B.EXE&#39; will unzip 33 files into whatever the current directory is, when it&#39;s executed. If that&#39;s the &#39;WFW3DVRS&#39; directory, it will try to overwrite &#39;OEMSETUP.INF&#39;.</li>
     <li>Type <code>MD TCP32B</code> -&gt; press Return -&gt; Type <code>CD TCP32B</code> -&gt; press Return </li>
     <li>Now you can type <code>..\TCP32B.EXE | MORE</code> to unzip the files -&gt; press Return </li>
     <li>Using <code>| MORE</code> lets us see the output of <code>..\TCP32B.EXE</code>, page-by-page:
 <pre>
 PKSFX (R)   FAST!   Self Extract Utility   Version 2.04g   02-01-93
 Copr. 1989-1993 PKWARE Inc. All Rights Reserved. Registered version
-PKSFX Reg. U.S. PAT. and Tm. Off.
+PKSFX Reg. U.S. Pat. and Tm. Off.
 
 Searching EXE: C:/WFW3DVRS/TCP32B/../TCP32B.EXE
   Inflating: ARP.EXE       -AV
   Inflating: FTP.EXE       -AV
   Inflating: HOSTS.SAM     -AV
 ...
-  Inflating: README.TXT    -AV
-  Inflating: ROUTE.EXE     -AV
   Inflating: SERVICES      -AV
 -- More --
 </pre> -&gt; press Return to show the next page of output
@@ -320,21 +324,24 @@ MICROSOFT CORPORATION
 -- More --
 </pre> -&gt; press Return to get back to the prompt
     </li>
-    <li>Type <code>CD C:\</code> to go back to the top of the hard drive -&gt; press Return </li>
+    <li>Type <code>CD \</code> to go back to the top of the hard drive -&gt; press Return </li>
     <li>Click the small &#39;Floppy&#39; icon again -&gt; &#39;Remove disk from virtual drive&#39;</li>
     <li>Press HostKey-T to take a snapshot</li>
     <li>Snapshot Name: After Copying WFW3DVRS to Drive C</li>
     <li>Snapshot Description: WFW311 CD-ROM and Network drivers, ready to install.</li>
     <li>Click &#39;Ok&#39; -&gt; HostKey-Q -&gt; select &#39;Power off the machine&#39;</li>
     <li>Tick &#39;Restore current snapshot ‘After Copying ... Drive C’&#39; -&gt; click &#39;OK&#39;</li>
-    <li>In VirtualBox Manager, you should see &#39;Saved&#39; under &#39;MS-DOS 6.22&#39;</li>
+    <li>In VirtualBox Manager, you should see &#39;Saved&#39; under &#39;Windows-3.11&#39;</li>
+    <li>Click &#39;Current State (changed)&#39; to select it -&gt; click the &#39;Discard&#39; icon</li>
+    <li>At the &#39;Are you sure ...&#39; popup, click &#39;Discard&#39;</li>
+    <li>You should see that the virtual machine is now &#39;Powered Off&#39;</li>
     <li>Command-Q to quit VirtualBox Manager (good practice before backing up)</li>
     <li>Command-Tab to &#39;Finder&#39; -&gt; Command-Shift-H -&gt; double-click &#39;VirtualBox VMs&#39;</li>
     <li>Optionally, delete the &#39;Logs&#39; folder inside the &#39;Windows-3.11&#39; folder</li>
     <li>Control-click the &#39;Windows-3.11&#39; folder -&gt; click &#39;Compress “Windows-3.11”&#39;</li>
     <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-after-copying-wfw3dvrs-to-drive-c.zip">windows-3.11-after-copying-wfw3dvrs-to-drive-c.zip</a>
     </li>
-    <li>Back up the &#39;windows-3.11-after-copying-wfw3dvrs-to-drive-c.zip&#39; file (~6.3 MB)</li>
+    <li>Back up the &#39;windows-3.11-after-copying-wfw3dvrs-to-drive-c.zip&#39; file (~7.7 MB)</li>
   </ol>
   <h2 id="vi-install-the-cd-rom-driver">VI. Install the CD-ROM driver</h2>
   <blockquote>
@@ -350,7 +357,7 @@ MICROSOFT CORPORATION
     <li>Note that the small &#39;IDE&#39; icon to the left of the &#39;Floppy&#39; icon is grayed-out, which indicates that the virtual CD-ROM drive is currently empty</li>
     <li>At the top of your computer&#39;s screen, click &#39;Devices&#39; -&gt; &#39;Insert Guest Additions CD image...&#39; (Windows 3 cannot actually install Guest Additions, but the CD image is still handy for testing the CD-ROM driver)</li>
     <li>The &#39;IDE&#39; icon should now be light blue, which means a virtual CD is inserted</li>
-    <li>Type <code>DIR D:</code> -&gt; press Return -&gt; you should see: <br>
+    <li>Type <code>DIR D:</code> -&gt; press Return -&gt; you should see an error message: <br>
       <code>Invalid driver specification</code>
       <br>...confirming that MS-DOS cannot currently see VirtualBox&#39;s virtual CD-ROM
     </li>
@@ -387,7 +394,7 @@ SET TEMP=C:\DOS
     <li>Press Alt -&gt; press Return -&gt; press X -&gt; press Y, to save and exit</li>
     <li>You should be back in the normal MS-DOS environment again</li>
     <li>HostKey-Q -&gt; select &#39;Power off the machine&#39;</li>
-    <li>&#39;Restore current snapshot ...&#39; <em>must be unticked</em> -&gt; click &#39;OK&#39; </li>
+    <li>&#39;Restore current snapshot ...&#39; <em>must NOT be ticked</em> -&gt; click &#39;OK&#39; </li>
     <li>Double-click the Powered Off &#39;Windows-3.11&#39; in the sidebar, to start it running again. A <a href="https://en.wikipedia.org/wiki/Reboot#Cold_versus_warm_reboot">&#39;cold&#39; reboot</a> like this is generally more reliable than a &#39;warm&#39; Control-Alt-Delete reboot. </li>
     <li>You should see that the CD-ROM driver outputs some new boilerplate, as MS-DOS starts up:
 <pre>
@@ -399,14 +406,13 @@ Transfer Mode      : Programmed I/O
 Drive 0:  Port= 170 (Secondary Channel), Master  IRQ= 15
 Firmware Version   : 1.0
 </pre>
-    </li>
-    <li>Additionally, a new line appears above the <code>C:\&gt;</code> prompt: <br>
+    Additionally, a new line appears above the <code>C:\&gt;</code> prompt: <br>
       <code>Drive D: = Driver IDECD000 unit 0</code>
     </li>
     <li>The &#39;IDE&#39; icon should still be light blue, meaning the Guest Additions virtual CD is still inserted</li>
     <li>Type <code>DIR D:</code> -&gt; press Return -&gt; you should see a dozen or so files, which confirms that VirtualBox&#39;s virtual CD-ROM is now working correctly </li>
     <li>Click the &#39;IDE&#39; icon -&gt; &#39;Remove disk from virtual drive&#39; (you may need to press the &#39;host key&#39; to get your mouse cursor back)</li>
-    <li>Type <code>DIR D:</code> -&gt; press Return -&gt; MS-DOS shows an error message: <br>
+    <li>Type <code>DIR D:</code> -&gt; press Return -&gt; a different error message appears this time: <br>
       <code>CD101: Not ready reading drive D</code>
     </li>
     <li>At the <code>Abort, Retry, Fail?</code> prompt, type <code>A</code> to get the <code>C:\&gt;</code> prompt back </li>
@@ -415,17 +421,31 @@ Firmware Version   : 1.0
     <li>Snapshot Name: After Installing CD-ROM Driver</li>
     <li>Snapshot Description: Oak Technology CD-ROM driver &#39;AOATAPI.SYS&#39; is working.</li>
     <li>Click &#39;Ok&#39; -&gt; HostKey-Q -&gt; select &#39;Power off the machine&#39;</li>
-    <li>Tick &#39;Restore current snapshot ‘After ... CD-ROM Driver’&#39; -&gt; click &#39;OK&#39;</li>
-    <li>In VirtualBox Manager, you should see &#39;Saved&#39; under &#39;MS-DOS 6.22&#39;</li>
+    <li>Tick &#39;Restore current snapshot ‘After Installing CD-ROM Driver’&#39; -&gt; click &#39;OK&#39;</li>
+    <li>In VirtualBox Manager, you should see &#39;Saved&#39; under &#39;Windows-3.11&#39;</li>
+    <li>Click &#39;Current State (changed)&#39; to select it -&gt; click the &#39;Discard&#39; icon</li>
+    <li>At the &#39;Are you sure ...&#39; popup, click &#39;Discard&#39;</li>
+    <li>You should see that the virtual machine is now &#39;Powered Off&#39;</li>
     <li>Command-Q to quit VirtualBox Manager (good practice before backing up)</li>
     <li>Command-Tab to &#39;Finder&#39; -&gt; Command-Shift-H -&gt; double-click &#39;VirtualBox VMs&#39;</li>
     <li>Optionally, delete the &#39;Logs&#39; folder inside the &#39;Windows-3.11&#39; folder</li>
     <li>Control-click the &#39;Windows-3.11&#39; folder -&gt; click &#39;Compress “Windows-3.11”&#39;</li>
     <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-after-installing-cd-rom-driver.zip">windows-3.11-after-installing-cd-rom-driver.zip</a>
     </li>
-    <li>Back up the &#39;windows-3.11-after-installing-cd-rom-driver.zip&#39; file (~8 MB)</li>
+    <li>Back up the &#39;windows-3.11-after-installing-cd-rom-driver.zip&#39; file (~9.5 MB)</li>
   </ol>
   <h2 id="vii-install-windows-311">VII. Install Windows 3.11</h2>
+  <p>
+    <figure>
+      <img src="./install-windows-3.11/install-windows-3.11-vii-470x340-poster.gif" alt="Windows 3.11 showing the 'Main' program group, during 'Windows Setup'.">
+      <figcaption>
+        <em>Windows 3.11 showing the &#39;Main&#39; program group, during &#39;Windows Setup&#39;.</em><br>
+        Watch the screencast:
+        <a href="./install-windows-3.11/install-windows-3.11-vii-940x680-12fps.mp4">MP4 (recommended)</a> or
+        <a href="./install-windows-3.11/install-windows-3.11-vii-470x340-12fps.gif">animated GIF</a>
+      </figcaption>
+    </figure>
+  </p>
   <ol>
     <li>Command-Tab to the &#39;Finder&#39; -&gt; Command-Shift-A -&gt; type &#39;virt&#39; to find the &#39;VirtualBox&#39; app -&gt; Command-O to open it</li>
     <li>Double-click the Powered Off &#39;Windows-3.11&#39; in the sidebar, to start it running</li>
@@ -449,12 +469,13 @@ Firmware Version   : 1.0
     <li>Repeat for Disks 4, 5 and 6, until you see &#39;Printer Installation&#39;</li>
     <li>Press Return to skip installing a printer -&gt; &#39;Network Setup&#39; should appear</li>
     <li>Press Return, because there is &#39;No Network Installed&#39; yet</li>
+    <li>Click the small &#39;Floppy&#39; icon again -&gt; &#39;Remove disk from virtual drive&#39;</li>
     <li>&#39;Set Up Applications&#39; should appear -&gt; press Return to choose &#39;MS-DOS Editor&#39;</li>
-    <li>If &#39;System Error Cannot read from drive D.&#39; appears, Click &#39;Cancel&#39; to ignore it</li>
+    <li>On &#39;Set Up Applications&#39; again -&gt; press Return to choose &#39;FTP PING Utility&#39;</li>
+    <li>If &#39;System Error Cannot read from drive D.&#39; appears, keep clicking the &#39;Cancel&#39; button until it disappears</li>
     <li>When &#39;Setup can now run a short tutorial ...&#39; appears, the installation is complete. You can try out the tutorial for some retro fun, or click &#39;Skip Tutorial&#39; to go straight to &#39;Exit Windows Setup&#39;.</li>
-    <li>Click the floppy disk icon again -&gt; click &#39;Remove disk from virtual drive&#39;</li>
-    <li>Clicking the &#39;Restart&#39; button just leads to an E200 error (see <a href="./install-ms-dos-6.22-on-virtualbox.html#viii-deal-with-an-unresponsive-restart">part VIII. of &#39;How to: Install MS-DOS 6.22 on VirtualBox&#39;</a> ). So instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;. </li>
-    <li>&#39;Restore current snapshot ...&#39; <em>must be unticked</em> -&gt; click &#39;OK&#39; </li>
+    <li>Clicking the &#39;Restart&#39; button sometimes leads to an E200 error (see <a href="./install-ms-dos-6.22-on-virtualbox.html#viii-deal-with-an-unresponsive-restart">part VIII. of &#39;How to: Install MS-DOS 6.22 on VirtualBox&#39;</a> ). So instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;. </li>
+    <li>&#39;Restore current snapshot ...&#39; <em>must NOT be ticked</em> -&gt; click &#39;OK&#39; </li>
     <li>Command-Tab to &#39;VirtualBox&#39; -&gt; double-click &#39;Windows-3.11&#39; to restart it</li>
     <li>Wait for the <code>C:\&gt;</code> prompt to appear -&gt; type <code>WIN</code> -&gt; press Return </li>
     <li>Windows 3.11 should open, showing &#39;Program Manager&#39; and &#39;Main&#39;</li>
@@ -469,12 +490,23 @@ Firmware Version   : 1.0
     <li>Control-click the &#39;Windows-3.11&#39; folder -&gt; click &#39;Compress “Windows-3.11”&#39;</li>
     <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-fresh-windows-3.11-install.zip">windows-3.11-fresh-windows-3.11-install.zip</a>
     </li>
-    <li>Back up the &#39;windows-3.11-fresh-windows-3.11-install.zip&#39; file (~18 MB)</li>
+    <li>Back up the &#39;windows-3.11-fresh-windows-3.11-install.zip&#39; file (~23.5 MB)</li>
   </ol>
-  <h2 id="viii-install-the-network-driver">VIII. Install the Network driver</h2>
+  <h2 id="viii-install-the-network-drivers">VIII. Install the Network drivers</h2>
+  <p>
+    <figure>
+      <img src="./install-windows-3.11/install-windows-3.11-viii-470x340-poster.gif" alt="Entering 'Network Names' while installing Network drivers on Windows 3.11.">
+      <figcaption>
+        <em>Entering &#39;Network Names&#39; while installing Network drivers on Windows 3.11.</em><br>
+        Watch the screencast:
+        <a href="./install-windows-3.11/install-windows-3.11-viii-940x680-12fps.mp4">MP4 (recommended)</a> or
+        <a href="./install-windows-3.11/install-windows-3.11-viii-470x340-12fps.gif">animated GIF</a>
+      </figcaption>
+    </figure>
+  </p>
   <ol>
     <li>Command-Tab to the &#39;Finder&#39; -&gt; Command-Shift-A -&gt; type &#39;virt&#39; to find the &#39;VirtualBox&#39; app -&gt; Command-O to open it</li>
-    <li>Double-click the Powered Off &#39;Windows-3.11&#39; in the sidebar, to restore the most recent snapshot</li>
+    <li>Double-click the Saved &#39;Windows-3.11&#39; in the sidebar, to restore the most recent snapshot</li>
     <li>Windows 3.11 should already be running, showing &#39;Program Manager&#39; and &#39;Main&#39;</li>
     <li>Double-click &#39;Windows Setup&#39; -&gt; press Alt -&gt; press O -&gt; press N</li>
     <li>You should see the &#39;Network Setup&#39; panel -&gt; press N for &#39;Networks&#39;</li>
@@ -485,13 +517,13 @@ Firmware Version   : 1.0
     <li>The &#39;Install Driver&#39; panel should appear, with its default path <code>A:\</code>
     </li>
     <li>Press Delete -&gt; type <code>C:\WFW3DVRS</code> -&gt; press Return </li>
-    <li>Windows 3.11 should have identified the Network driver, and show the &#39;Unlisted or Updated Network Adapter&#39; panel. This lists one driver, &#39;Advanced Micro Devices PCNET family&#39;. It&#39;s selected, so -&gt; press Return</li>
+    <li>Windows 3.11 should have identified a Network driver, and show the &#39;Unlisted or Updated Network Adapter&#39; panel. This lists one driver, &#39;Advanced Micro Devices PCNET family&#39;. It&#39;s selected, so -&gt; press Return</li>
     <li>Base I/O Port: [The default, <code>0x0000</code>, is fine] -&gt; press Return </li>
     <li>Interrupt Value: <code>9</code> (any number seems to work here) -&gt; press Return </li>
     <li>DMA Channel Value: [The default, <code>Auto_Scan</code>, is fine] -&gt; press Return </li>
-    <li>User Name: [Keep the default, the value entered earlier]</li>
+    <li>User Name: [Choose a short memorable name]</li>
     <li>Workgroup: [Keep the default, <code>WORKGROUP</code>] </li>
-    <li>Computer Name: [Keep the default, the value entered earlier] -&gt; press Return</li>
+    <li>Computer Name: [Choose a short memorable name] -&gt; press Return</li>
     <li>You should see &#39;An error ... file NDIS.386.&#39; - what it really means is that you need to insert Windows 3.11 installation Disk 7</li>
     <li>Click the small &#39;Floppy&#39; icon at the bottom of the window (you may need to press the &#39;host key&#39; to get your mouse cursor back)</li>
     <li>Click &#39;Choose a disk file...&#39; -&gt; double-click &#39;Disk07.img&#39; in &#39;Microsoft Windows for Workgroups 3.11 (OEM) (3.5-1.44mb)&#39; in the &#39;Windows-3.11-Assets&#39; folder</li>
@@ -500,14 +532,14 @@ Firmware Version   : 1.0
     <li>Wait for the &#39;Windows setup has modified ...&#39; panel to appear (~5 seconds)</li>
     <li>Press Return for &#39;OK&#39;</li>
     <li>Click the small &#39;Floppy&#39; icon again -&gt; &#39;Remove disk from virtual drive&#39;</li>
-    <li>Clicking the &#39;Restart Computer&#39; button just leads to an E200 error (see <a href="./install-ms-dos-6.22-on-virtualbox.html#viii-deal-with-an-unresponsive-restart">part VIII. of &#39;How to: Install MS-DOS 6.22 on VirtualBox&#39;</a> ). So instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;. </li>
-    <li>&#39;Restore current snapshot ...&#39; <em>must be unticked</em> -&gt; click &#39;OK&#39; </li>
+    <li>Clicking the &#39;Restart Computer&#39; button sometimes leads to an E200 error (see <a href="./install-ms-dos-6.22-on-virtualbox.html#viii-deal-with-an-unresponsive-restart">part VIII. of &#39;How to: Install MS-DOS 6.22 on VirtualBox&#39;</a> ). So instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;. </li>
+    <li>&#39;Restore current snapshot ...&#39; <em>must NOT be ticked</em> -&gt; click &#39;OK&#39; </li>
     <li>Command-Tab to &#39;VirtualBox&#39; -&gt; double-click &#39;Windows-3.11&#39; to restart it</li>
     <li>Wait for the <code>C:\&gt;</code> prompt to appear -&gt; type <code>WIN</code> -&gt; press Return </li>
     <li>You should see &#39;Welcome to Windows for Workgroups&#39;, with your &#39;Logon Name&#39; filled in and the cursor blinking in the &#39;Password&#39; field -&gt; press Return</li>
     <li>For &#39;There is no password-list file ...&#39; -&gt; press Y for &#39;Yes&#39;</li>
     <li>Keep &#39;New Password&#39; and &#39;Confirm New Password&#39; blank -&gt; press Return</li>
-    <li>The program group &#39;Network&#39; should be selected -&gt; press Return to open it</li>
+    <li>Double-click the program group &#39;Network&#39;</li>
     <li>The program &#39;Network Setup&#39; should be selected -&gt; press Return to open it</li>
     <li>Under &#39;Network Drivers:&#39; you should see &#39;Advanced Micro Devices PCNET family [NDIS2/NDIS3]&#39; selected. Under that should be &#39;Microsoft NetBEUI&#39; and &#39;IPX/SPX Compatible Transport with NetBIOS&#39;.</li>
     <li>Press D to open the &#39;Network Drivers&#39; panel -&gt; press P for &#39;Add Protocol...&#39;</li>
@@ -520,8 +552,8 @@ Firmware Version   : 1.0
     <li>On the &#39;Microsoft TCP/IP configuration&#39; panel -&gt; tick the &#39;Enable Automatic DHCP configuration&#39; checkbox</li>
     <li>For &#39;Microsoft TCP/IP&#39; panel -&gt; press Y to enable DHCP -&gt; Press Return</li>
     <li>The &#39;Network setup ... PROTOCOL.000.&#39; panel should appear -&gt; press Return</li>
-    <li>Clicking the &#39;Restart Computer&#39; when the &#39;You need to quit Windows ...&#39; panel appears just leads to an E200 error. Instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;.</li>
-    <li>&#39;Restore current snapshot ...&#39; <em>must be unticked</em> -&gt; click &#39;OK&#39; </li>
+    <li>Clicking the &#39;Restart Computer&#39; when the &#39;You need to quit Windows ...&#39; panel appears sometimes leads to an E200 error. Instead, HostKey-Q -&gt; select &#39;Power off the machine&#39;.</li>
+    <li>&#39;Restore current snapshot ...&#39; <em>must NOT be ticked</em> -&gt; click &#39;OK&#39; </li>
     <li>Command-Tab to &#39;VirtualBox&#39; -&gt; double-click &#39;Windows-3.11&#39; to restart it</li>
     <li>You should see some new boilerplate, which wasn&#39;t there before:
 <pre>
@@ -585,11 +617,11 @@ Successfully installed:
     <li>Control-click the &#39;Windows-3.11&#39; folder -&gt; click &#39;Compress “Windows-3.11”&#39;</li>
     <li>Press Return -&gt; name it <a href="./install-windows-3.11/windows-3.11-with-cd-rom-and-network-drivers.zip">windows-3.11-with-cd-rom-and-network-drivers.zip</a>
     </li>
-    <li>Back up the &#39;windows-3.11-with-cd-rom-and-network-drivers.zip&#39; file (~ @TODO MB)</li>
+    <li>Back up the &#39;windows-3.11-with-cd-rom-and-network-drivers.zip&#39; file (~27 MB)</li>
   </ol>
   <blockquote>
     <p>
-      <strong>DOWNLOAD:</strong> The &#39;windows-3.11-with-cd-rom-and-network-drivers.zip&#39; archive is available <a href="./install-ms-dos-6.22/windows-3.11-with-cd-rom-and-network-drivers.zip">here</a>.
+      <strong>DOWNLOAD:</strong> The &#39;windows-3.11-with-cd-rom-and-network-drivers.zip&#39; archive is available <a href="./install-windows-3.11/windows-3.11-with-cd-rom-and-network-drivers.zip">here</a>.
     </p>
   </blockquote>
   <hr>
